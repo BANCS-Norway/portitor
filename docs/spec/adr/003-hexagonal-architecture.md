@@ -1,1 +1,0 @@
-../../../spec/adr/003-hexagonal-architecture.md

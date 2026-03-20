@@ -1,0 +1,1 @@
+../../../../spec/adr/001-s3-as-event-store.md

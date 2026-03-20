@@ -1,0 +1,1 @@
+../../../../spec/adr/002-key-path-as-metadata.md
