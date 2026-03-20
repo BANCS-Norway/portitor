@@ -1,0 +1,1 @@
+../../../spec/adr/005-plugin-protocol.md
