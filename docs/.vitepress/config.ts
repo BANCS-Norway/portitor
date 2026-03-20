@@ -49,6 +49,11 @@ export default defineConfig({
           text: 'ADRs',
           items: [
             { text: 'Index', link: '/spec/adr/' },
+            { text: 'ADR-001: S3 as Event Store', link: '/spec/adr/001-s3-as-event-store' },
+            { text: 'ADR-002: Key Path as Metadata', link: '/spec/adr/002-key-path-as-metadata' },
+            { text: 'ADR-003: Hexagonal Architecture', link: '/spec/adr/003-hexagonal-architecture' },
+            { text: 'ADR-004: Multi-Language Spec-First', link: '/spec/adr/004-multi-language-spec-first' },
+            { text: 'ADR-005: Plugin Protocol', link: '/spec/adr/005-plugin-protocol' },
           ],
         },
       ],
