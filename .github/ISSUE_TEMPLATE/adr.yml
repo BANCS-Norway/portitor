@@ -1,0 +1,29 @@
+name: Architecture Decision Record
+description: Propose a new ADR or revision to an existing one
+title: "adr: "
+labels: ["adr"]
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What problem or decision needs to be recorded?
+    validations:
+      required: true
+  - type: textarea
+    id: decision
+    attributes:
+      label: Proposed Decision
+    validations:
+      required: true
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: Positive and negative consequences of this decision
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered

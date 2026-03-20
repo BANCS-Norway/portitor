@@ -1,0 +1,35 @@
+name: New Language Implementation
+description: Track a new language implementation of the Portitor spec
+title: "impl: "
+labels: ["implementation"]
+body:
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - TypeScript
+        - Ruby
+        - Go
+        - .NET
+        - Python
+        - PHP
+        - Kotlin
+        - Clojure
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: Target Repository
+      placeholder: BANCS-Norway/portitor-ruby
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Which parts of the spec will this implementation cover?
+    validations:
+      required: true

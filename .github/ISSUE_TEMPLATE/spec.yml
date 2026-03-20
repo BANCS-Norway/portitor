@@ -1,0 +1,37 @@
+name: Spec Change
+description: Propose a change or addition to the Portitor specification
+title: "spec: "
+labels: ["spec"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Spec Area
+      options:
+        - Key Schema
+        - Domain Events
+        - Plugin Protocol
+        - HTTP API
+        - Conformance Tests
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What gap or issue does this address?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Change
+      description: What should the spec say?
+    validations:
+      required: true
+  - type: checkboxes
+    id: breaking
+    attributes:
+      label: Breaking Change?
+      options:
+        - label: This change would break existing implementations (requires major version bump)
