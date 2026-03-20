@@ -50,13 +50,13 @@ The [spec](./spec/) is the shared contract. Each language is a first-class imple
 
 ```
 spec/        Machine-readable specification (JSON Schema, OpenAPI, ADRs)
-docs/        Documentation site → https://bancs-norway.github.io/portitor
+docs/        Documentation site → https://portitor.bancs.no
 packages/    Shared tooling and conformance test runner
 ```
 
 ## Documentation
 
-[bancs-norway.github.io/portitor](https://bancs-norway.github.io/portitor)
+[portitor.bancs.no](https://portitor.bancs.no)
 
 ## License
 

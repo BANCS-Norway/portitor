@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Portitor',
   description: 'Open-source e-commerce ↔ warehouse integration platform',
-  base: '/portitor/',
+  base: '/',
 
   themeConfig: {
     logo: '/logo.svg',
