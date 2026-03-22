@@ -1,0 +1,1 @@
+../../../../spec/adr/006-pluggable-auth.md

@@ -1,0 +1,1 @@
+../../../../spec/adr/007-push-pull-ingestion.md
