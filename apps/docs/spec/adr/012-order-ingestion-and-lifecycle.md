@@ -1,0 +1,1 @@
+../../../../spec/adr/012-order-ingestion-and-lifecycle.md

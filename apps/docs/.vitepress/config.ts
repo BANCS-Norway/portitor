@@ -60,6 +60,7 @@ export default defineConfig({
             { text: 'ADR-009: Model-Driven OpenAPI', link: '/spec/adr/009-model-driven-openapi' },
             { text: 'ADR-010: JSON Schema as System Driver', link: '/spec/adr/010-json-schema-as-system-driver' },
             { text: 'ADR-011: AI Configuration Validation', link: '/spec/adr/011-ai-configuration-validation' },
+            { text: 'ADR-012: Order Ingestion and Lifecycle', link: '/spec/adr/012-order-ingestion-and-lifecycle' },
           ],
         },
       ],

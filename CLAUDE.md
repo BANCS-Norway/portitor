@@ -138,6 +138,7 @@ Current ADR index:
 | ADR-009 | Model-Driven OpenAPI Assembly | Proposed |
 | ADR-010 | JSON Schema as the System Driver | Proposed |
 | ADR-011 | AI-Assisted Configuration Validation | Proposed |
+| ADR-012 | Order Ingestion and Lifecycle | Proposed |
 
 ---
 
