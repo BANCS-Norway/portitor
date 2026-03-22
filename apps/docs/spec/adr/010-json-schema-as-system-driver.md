@@ -1,0 +1,1 @@
+../../../../spec/adr/010-json-schema-as-system-driver.md

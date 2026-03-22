@@ -135,6 +135,9 @@ Current ADR index:
 | ADR-006 | Pluggable Authentication for Inbound Push Sources | Proposed |
 | ADR-007 | Push vs Pull Ingestion Model | Proposed |
 | ADR-008 | Tenant Routing and Dynamic OpenAPI Generation | Proposed |
+| ADR-009 | Model-Driven OpenAPI Assembly | Proposed |
+| ADR-010 | JSON Schema as the System Driver | Proposed |
+| ADR-011 | AI-Assisted Configuration Validation | Proposed |
 
 ---
 

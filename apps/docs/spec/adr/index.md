@@ -12,3 +12,6 @@ ADRs document significant architectural decisions, their context, and the reason
 | [ADR-006](./006-pluggable-auth) | Pluggable authentication for inbound push sources | Proposed |
 | [ADR-007](./007-push-pull-ingestion) | Push vs pull ingestion model | Proposed |
 | [ADR-008](./008-tenant-routing) | Tenant routing and dynamic OpenAPI generation | Proposed |
+| [ADR-009](./009-model-driven-openapi) | Model-driven OpenAPI assembly | Proposed |
+| [ADR-010](./010-json-schema-as-system-driver) | JSON Schema as the system driver | Proposed |
+| [ADR-011](./011-ai-configuration-validation) | AI-assisted configuration validation | Proposed |

@@ -1,0 +1,1 @@
+../../../../spec/adr/011-ai-configuration-validation.md

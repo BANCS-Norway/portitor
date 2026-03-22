@@ -1,0 +1,1 @@
+../../../../spec/adr/009-model-driven-openapi.md
