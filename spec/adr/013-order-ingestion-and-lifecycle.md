@@ -1,4 +1,4 @@
-# ADR-012: Order Ingestion and Lifecycle
+# ADR-013: Order Ingestion and Lifecycle
 
 **Status:** Proposed **Date:** 2026-03-22
 
@@ -8,6 +8,11 @@ Orders are the primary aggregate in Portitor. The platform must receive an
 order from a source adapter, validate it, map it to the warehouse model, and
 dispatch it — while maintaining a full audit trail at every step and providing
 a recovery path when things go wrong.
+
+The steps between ingest and dispatch are configurable per tenant (ADR-012).
+This ADR defines the ingest and dispatch mechanics, the event shapes, the
+failure and override paths, and the validation mode semantics that apply
+across all pipeline configurations.
 
 Several failure modes must be handled explicitly:
 
@@ -62,8 +67,13 @@ The validation worker processes the pointer:
 ### Step 3 — Map and Dispatch (happy path)
 
 1. Mapper transforms the webstore model to the warehouse model (ADR-009)
-2. `OrderSentToWarehouse` event fired
-3. Order added to the **unhandled orders projection** — orders awaiting
+2. Mapper generates the **warehouse-facing order reference** — a unique
+   identifier sent to the warehouse alongside the order. This reference
+   encodes the tenant so that when the warehouse later sends a shipment
+   notification, the platform can resolve both the order and the correct
+   tenant without ambiguity. A single warehouse may serve multiple tenants.
+3. `OrderSentToWarehouse` event fired, carrying the warehouse-facing reference
+4. Order added to the **unhandled orders projection** — orders awaiting
    warehouse confirmation
 
 ### Failure Path
