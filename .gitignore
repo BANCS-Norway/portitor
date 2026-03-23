@@ -1,5 +1,3 @@
 node_modules/
-docs/.vitepress/dist
-docs/.vitepress/cache
-.env
-.env.local
+apps/docs/.vitepress/dist/
+apps/docs/.vitepress/cache/

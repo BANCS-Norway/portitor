@@ -15,4 +15,6 @@ ADRs document significant architectural decisions, their context, and the reason
 | [ADR-009](./009-model-driven-openapi) | Model-driven OpenAPI assembly | Proposed |
 | [ADR-010](./010-json-schema-as-system-driver) | JSON Schema as the system driver | Proposed |
 | [ADR-011](./011-ai-configuration-validation) | AI-assisted configuration validation | Proposed |
-| [ADR-012](./012-order-ingestion-and-lifecycle) | Order ingestion and lifecycle | Proposed |
+| [ADR-012](./012-configurable-order-pipeline) | Configurable order pipeline | Proposed |
+| [ADR-013](./013-order-ingestion-and-lifecycle) | Order ingestion and lifecycle | Proposed |
+| [ADR-014](./014-shipment-return-flow) | Shipment return flow | Proposed |
