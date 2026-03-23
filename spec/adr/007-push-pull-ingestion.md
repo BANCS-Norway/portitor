@@ -90,11 +90,17 @@ The platform stores the cursor at:
 On each pull execution:
 1. Platform reads the cursor from S3 (or initialises to epoch if absent)
 2. Plugin receives cursor, fetches events since that position
-3. Platform writes events to the event store
-4. Platform updates the cursor in S3
+3. Platform writes each event payload to S3 and enqueues an order pointer
+   for the pipeline (ADR-012) — identical to the push ingest path
+4. Platform updates the cursor in S3 after all events in the batch are written
 
 If step 3 or 4 fails, the cursor is not advanced — the next execution
 reprocesses from the same position. Plugins must be idempotent.
+
+The cursor is updated once per batch, not per event. A mid-batch failure
+leaves all fetched orders in the pipeline and the cursor at its previous
+position; the next execution will re-fetch the same batch. Idempotency
+in step 3 ensures duplicate writes are safe.
 
 ## Alternatives Considered
 

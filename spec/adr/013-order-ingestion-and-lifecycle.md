@@ -37,19 +37,33 @@ asynchronously. Validation failure is a recoverable state, not a rejection.**
 
 ### Step 1 — Ingest
 
+Ingest can be triggered two ways:
+
+**Push** — a `PushSourcePlugin` receives an inbound webhook and the platform
+calls this endpoint:
+
 ```
 POST /{company}/order
 ```
 
+Returns `201` immediately. The platform never rejects an inbound order at the
+HTTP layer for business logic reasons. Network-level errors (malformed JSON,
+missing required envelope fields) return `400`. Everything else is accepted
+and validated asynchronously.
+
+**Pull** — a `PullSourcePlugin` polls the webshop on a schedule (ADR-007).
+The platform iterates the fetched orders and runs the same ingest step for
+each. No HTTP response is involved — completion is signalled by cursor
+advancement.
+
+Both paths execute the same ingest logic:
+
 1. Payload written to S3 at the canonical key path (ADR-001 pointer pattern)
 2. `OrderReceived` event fired
-3. Lightweight pointer enqueued for the validation worker
-4. **Returns 201 immediately** — the order is accepted as received regardless
-   of what validation will find
+3. Lightweight pointer enqueued for the pipeline (ADR-012)
 
-The platform never rejects an inbound order at the HTTP layer for business
-logic reasons. Network-level errors (malformed JSON, missing required envelope
-fields) return 400. Everything else is accepted and validated asynchronously.
+Once an order is written to S3 and `OrderReceived` fires, the pipeline is
+identical regardless of how the order arrived.
 
 ### Step 2 — Validate
 
